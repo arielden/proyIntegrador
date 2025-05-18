@@ -41,7 +41,7 @@ Asegurarse de tener instalado nodey npm (generalmente inncluído con node):
 
 ## Resultado según el avance de cada evidencia.
 
-1. Como resultado de la evidencia 1, se realizó la instalación de los módulos y una grilla de productos básica. [![Vista de Productos](screenshots/evidencia1_working_gridProducts.png)](https://github.com/arielden/proyIntegrador/blob/main/screenshots/evidencia1_working_gridProducts.png)
+1. Como resultado de la evidencia 1, se realizó la instalación de los módulos y una grilla de productos básica. ![Vista de Productos](screenshots/evidencia1_working_gridProducts.png)
 
 2. Como resultado de la evidencia 2, se agregaron filtros dinámicos, estadísticas (que se calculan sobre los items filtrados), modularización en componentes y mejoras en la visualización. ![Vista de Productos](screenshots/evidencia2_working_filter.png)
 
