@@ -6,7 +6,7 @@ function ProductList({ products }) {
       {products.map(product => (
         <div key={product.id} className="border p-4 m-2 bg-gray-800 text-white rounded-md shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-lg font-semibold">{product.title}</h2>
-          <p className="text-gray-300">Price: ${product.price}</p>
+          <p className="text-gray-300">Precio: ${product.price}</p>
         </div>
       ))}
     </div>

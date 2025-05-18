@@ -1,60 +1,65 @@
-# Project Setup and Instructions
+# Configuración e Instrucciones
 
-This project is a React application built with Vite. Below are the steps to set up and run the project locally.
+Este proyecto es una aplicación Vite+React que sirve como base de las evidencias 1 y 2. A continuación, se detallan los pasos para configurar y ejecutar el proyecto localmente.
 
-## Prerequisites
+## Requisitos
 
-Make sure you have the following installed on your system:
+Asegurarse de tener instalado nodey npm (generalmente inncluído con node):
 
-- [Node.js](https://nodejs.org/) (version 14 or higher)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
 
-## Installation
+## Instalación
 
-1. Clone or download the project to your local machine.
-2. Navigate to the project directory:
+1. Clonar este repositorio localmente.
+2. Navega hasta el directorio del proyecto:
 
    ```bash
    cd evidencias1y2
    ```
 
-3. Install the dependencies:
+3. Instalar las dependencias:
 
    ```bash
    npm install
    ```
 
-## Running the Development Server
+## Ejecutar del server
 
-1. Start the development server:
+1. Inicializar el servidor en modo de desarrollo:
 
    ```bash
    npm run dev
    ```
 
-2. Open your browser and navigate to the URL provided in the terminal (usually `http://localhost:5173`).
+2. Abrir el navegador haciendo Crtl+click sobre el enlace proporcionado en la terminal (generalmente `http://localhost:5173`).
 
-## Building for Production
 
-To create a production build of the project, run:
+## Notas
 
-```bash
-npm run build
-```
+- En este proyecto se utilizó Tailwind CSS para los estilos.
+- Axios se utiliza para realizar solicitudes HTTP.
 
-The build files will be generated in the `dist` folder.
+## Resultado según el avance de cada evidencia.
 
-## Previewing the Production Build
+1. Como resultado de la evidencia 1, se realizó la instalación de los módulos y una grilla de productos básica. ![Vista de Productos](screenshots/evidencia1_working_gridProducts.png)
 
-To preview the production build locally, run:
+2. Como resultado de la evidencia 2, se agregaron filtros dinámicos, estadísticas (que se calculan sobre los items filtrados), modularización en componentes y mejoras en la visualización. ![Vista de Productos](screenshots/evidencia2_working_filter.png)
 
-```bash
-npm run preview
-```
+2.1 En esta sección se implementaron estadísticas dinámicas que se calculan sobre los productos filtrados, se incluye:
 
-## Additional Notes
+- **Producto más caro:** Muestra el producto con el precio más alto.
+- **Producto más barato:** Muestra el producto con el precio más bajo.
+- **Cantidad de productos con títulos largos:** Cuenta los productos cuyo título tiene más de 20 caracteres.
+- **Descuento promedio:** Calcula el promedio de los descuentos de los productos filtrados.
+- **Mayor y menor descuento:** Identifica los productos con el mayor y menor porcentaje de descuento.
+- **Rango de precios:** Muestra el precio mínimo y máximo entre los productos filtrados.
 
-- This project uses Tailwind CSS for styling.
-- Axios is used for making HTTP requests.
+2.2 El código fse modularizó en los siguientes componentes para mejorar su organización y facilitar reutilización:
 
-Feel free to explore and modify the project as needed!
+Se identifica una fracción del código que tiene una responsabilidad específica. Luego, se crea un nuevo archivo para ese componente y se mueve el código correspondiente
+
+Se pasan los props desde el componente principal para que el nuevo componente pueda recibir los datos necesarios. Por ejemplo, en el caso de `StatsPanel`, se le envían los productos filtrados como prop para que calcule y muestre las estadísticas.
+
+- **FirstComponent:** Componente principal que gestiona la búsqueda y el filtrado de productos.
+- **StatsPanel:** Se encarga dde mostrar las estadísticas dinámicas calculadas sobre los productos filtrados.
+- **ProductList:** Renderiza los productos filtrados en una grilla
