@@ -11,7 +11,7 @@ Asegurarse de tener instalado nodey npm (generalmente inncluído con node):
 ## Instalación
 
 1. Clonar este repositorio localmente.
-2. Navega hasta el directorio del proyecto:
+2. Navegar hasta el directorio del proyecto:
 
    ```bash
    cd evidencias1y2
